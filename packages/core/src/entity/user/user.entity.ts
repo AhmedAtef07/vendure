@@ -50,8 +50,7 @@ export class User extends VendureEntity implements HasCustomFields, SoftDeletabl
     sessions: AuthenticatedSession[];
 
     getNativeAuthenticationMethod(): NativeAuthenticationMethod;
-    getNativeAuthenticationMethod(strict?: boolean): NativeAuthenticationMethod | undefined;
-
+    
     getNativeAuthenticationMethod(strict?: boolean): NativeAuthenticationMethod | undefined {
         if (!this.authenticationMethods) {
             throw new InternalServerError('error.user-authentication-methods-not-loaded');
